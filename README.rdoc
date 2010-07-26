@@ -20,7 +20,7 @@ no caso do Bundler
 Para uma determinada factory:
 
   Factory.define :turma do | f |
-	  f.nome "Nome da turma"
+    f.nome "Nome da turma"
   end
 
   Factory.define :estado do | f |
