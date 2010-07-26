@@ -8,40 +8,40 @@ O nome é uma tradução literal do projeto original.
 
 == Instalação
 
-gem install garota_da_fabrica
+	gem install garota_da_fabrica
 
 no caso do Bundler
 
-gem "garota_da_fabrica"
+	gem "garota_da_fabrica"
 
 
 == Utilização
 
 Para uma determinada factory:
 
-	Factory.define :turma do |f|
-	  f.nome "Nome da turma"
-	end
+    Factory.define :turma do |f|
+      f.nome "Nome da turma"
+    end
 
-	Factory.define :estado do |f|
-	  f.nome "Rio de Janeiro"
-	end
+    Factory.define :estado do |f|
+      f.nome "Rio de Janeiro"
+    end
 
-	Factory.define :usuario do |f|
-	  f.nome "Edie Sedgwick"
-		f.association :estado
-	end
+    Factory.define :usuario do |f|
+      f.nome "Edie Sedgwick"
+    	f.association :estado
+    end
 
 === Dado /^que existem? (?:o|a)s? seguintes? (?:#{factory.human_name}|#{factory.human_name.pluralize}):
 
-Dado que existe o seguinte usuario:
-  | nome |
-  | Edie Sedgwick |
+    Dado que existe o seguinte usuario:
+      | nome |
+      | Edie Sedgwick |
 
-Dado que existe os seguintes usuarios:
-  | nome | estado |
-  | Edie Sedgwick | nome:Rio de Janeiro |
-  | Andy Warhol | nome:São Paulo |
+    Dado que existe os seguintes usuarios:
+      | nome | estado |
+      | Edie Sedgwick | nome:Rio de Janeiro |
+      | Andy Warhol | nome:São Paulo |
 	
 === Dado /^que existe uma? #{factory.human_name}$/
 
