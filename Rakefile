@@ -5,13 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "garota_da_fabrica"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Cucumber steps em português para FactoryGirl}
+    gem.description = %Q{Utilize os "steps_definitions" do FactoryGirl em português com o Cucumber.}
     gem.email = "jlbfalcao@gmail.com"
     gem.homepage = "http://github.com/jlbfalcao/garota_da_fabrica"
     gem.authors = ["Jorge Falcão"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.add_dependency "factory-girl"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
