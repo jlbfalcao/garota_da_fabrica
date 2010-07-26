@@ -10,7 +10,8 @@ begin
     gem.email = "jlbfalcao@gmail.com"
     gem.homepage = "http://github.com/jlbfalcao/garota_da_fabrica"
     gem.authors = ["Jorge Falcão"]
-    gem.add_dependency "factory-girl"
+    gem.add_dependency "factory_girl"
+    gem.add_dependency "cucumber"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
