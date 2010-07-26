@@ -15,7 +15,7 @@ begin
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
-  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
+  puts "Jeweler não está disponível. Instale com: gem install jeweler"
 end
 
 require 'rake/testtask'
@@ -34,7 +34,7 @@ begin
   end
 rescue LoadError
   task :rcov do
-    abort "RCov is not available. In order to run rcov, you must: gem install relevance-rcov --source http://gems.github.com"
+    abort "RCov não está disponível. Para rodar o RCov, digite: gem install relevance-rcov --source http://gems.github.com"
   end
 end
 
