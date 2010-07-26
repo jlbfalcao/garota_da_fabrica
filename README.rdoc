@@ -8,10 +8,10 @@ O nome é uma tradução literal do projeto original.
 
 == Instalação
 
+Gem:
   gem install garota_da_fabrica
 
-no caso do Bundler
-
+Bundler:
   gem "garota_da_fabrica"
 
 
