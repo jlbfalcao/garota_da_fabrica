@@ -8,24 +8,29 @@ O nome é uma tradução literal do projeto original.
 
 == Instalação
 
-TODO
+gem install garota_da_fabrica
+
+no caso do Bundler
+
+gem "garota_da_fabrica"
+
 
 == Utilização
 
 Para uma determinada factory:
 
-Factory.define :turma do |f|
-  f.nome "Nome da turma"
-end
+	Factory.define :turma do |f|
+	  f.nome "Nome da turma"
+	end
 
-Factory.define :estado do |f|
-  f.nome "Rio de Janeiro"
-end
+	Factory.define :estado do |f|
+	  f.nome "Rio de Janeiro"
+	end
 
-Factory.define :usuario do |f|
-  f.nome "Edie Sedgwick"
-	f.association :estado
-end
+	Factory.define :usuario do |f|
+	  f.nome "Edie Sedgwick"
+		f.association :estado
+	end
 
 === Dado /^que existem? (?:o|a)s? seguintes? (?:#{factory.human_name}|#{factory.human_name.pluralize}):
 
@@ -40,21 +45,21 @@ Dado que existe os seguintes usuarios:
 	
 === Dado /^que existe uma? #{factory.human_name}$/
 
-Dado que existe um usuario
-Dado que existe uma turma
+    Dado que existe um usuario
+    Dado que existe uma turma
 
 === Dado /^que existem (\d+) #{factory.human_name.pluralize}$/
 
-Dado que existem 32 usuarios
+    Dado que existem 32 usuarios
 
 === Dado /^que existe uma? #{factory.human_name} com #{human_column_name} igual a "([^"]*)"$/
 
-Dado que existe um usuario com nome igual a "Andy Warhol"
-Dado que existe uma cidade com o nome igual a "Rio de Janeiro"
+    Dado que existe um usuario com nome igual a "Andy Warhol"
+    Dado que existe uma cidade com o nome igual a "Rio de Janeiro"
 
 === Dado /^que existem (\d+) #{factory.human_name.pluralize} com #{human_column_name} igual a "([^"]*)"$/
 
-Dado que existem 2 usuarios com nome igual a "Andy Warhol"
+    Dado que existem 2 usuarios com nome igual a "Andy Warhol"
 
 == TODO
 
