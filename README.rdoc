@@ -8,6 +8,7 @@ O nome é uma tradução literal do projeto original.
 
 == TODO
 
+* adicionar RDOC
 * exemplos de utilização
 * testes
 
