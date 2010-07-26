@@ -1,5 +1,5 @@
 
-# Tradução dos steps da framework factory girl 
+# Tradução dos steps da framework factory girl
 
 FactoryGirl.factories.values.each do |factory|
   Dado /^que existem? (?:o|a)s? seguintes? (?:#{factory.human_name}|#{factory.human_name.pluralize}):$/ do |table|
