@@ -21,29 +21,31 @@
 #  Dado que existe um produto com descricao igual a mochila
 #  Dado que existem 8 produtos com preco igual a 80
 ## 
-FactoryGirl.factories.values.each do |factory|
-  Dado /^que existem? (?:o|a)s? seguintes? (?:#{factory.human_name}|#{factory.human_name.pluralize}):$/ do |table|
-    Given %{the following #{factory.human_name} exists:}, table
-  end
+if defined?(FactoryGirl)
+  FactoryGirl.factories.values.each do |factory|
+    Dado /^que existem? (?:o|a)s? seguintes? (?:#{factory.human_name}|#{factory.human_name.pluralize}):$/ do |table|
+      Given %{the following #{factory.human_name} exists:}, table
+    end
   
-  Dado /^que existe uma? #{factory.human_name}$/ do
-    Given %{an #{factory.human_name} exists}
-  end
+    Dado /^que existe uma? #{factory.human_name}$/ do
+      Given %{an #{factory.human_name} exists}
+    end
 
-  Dado /^que existem (\d+) #{factory.human_name.pluralize}$/ do |count|
-    Given %{#{count} #{factory.human_name.pluralize} exist}
-  end
+    Dado /^que existem (\d+) #{factory.human_name.pluralize}$/ do |count|
+      Given %{#{count} #{factory.human_name.pluralize} exist}
+    end
 
- if factory.build_class.respond_to?(:columns)
-    factory.build_class.columns.each do |column|
-      human_column_name = column.name.downcase.gsub('_', ' ')
+   if factory.build_class.respond_to?(:columns)
+      factory.build_class.columns.each do |column|
+        human_column_name = column.name.downcase.gsub('_', ' ')
 
-      Dado /^que existe uma? #{factory.human_name} com #{human_column_name} igual a "([^"]*)"$/ do |value|
-        Given %{an #{factory.human_name} exists with an #{human_column_name} of "#{value}"}
-      end
+        Dado /^que existe uma? #{factory.human_name} com #{human_column_name} igual a "([^"]*)"$/ do |value|
+          Given %{an #{factory.human_name} exists with an #{human_column_name} of "#{value}"}
+        end
 
-      Dado /^que existem (\d+) #{factory.human_name.pluralize} com #{human_column_name} igual a "([^"]*)"$/ do |count, value|
-        Given %{#{count} #{factory.human_name.pluralize} exist with an #{human_column_name} of "#{value}"}
+        Dado /^que existem (\d+) #{factory.human_name.pluralize} com #{human_column_name} igual a "([^"]*)"$/ do |count, value|
+          Given %{#{count} #{factory.human_name.pluralize} exist with an #{human_column_name} of "#{value}"}
+        end
       end
     end
   end

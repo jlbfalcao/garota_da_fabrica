@@ -38,10 +38,11 @@ Gem::Specification.new do |s|
      "test/test_garota_da_fabrica.rb"
   ]
 
+  s.add_runtime_dependency('railties', '>= 3.0.0')
+
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
-
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<factory_girl>, [">= 0"])
       s.add_runtime_dependency(%q<cucumber>, [">= 0"])
